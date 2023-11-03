@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::selection{
+  color: #fff;
+  background: #000;
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(../fonts/Futura-Bold.ttf);
+}
+@font-face {
+  font-family: Helvetica;
+  src: url(../fonts/HelveticaNowText-Regular.ttf);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#page1 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  /* background: crimson; */
+  padding: 0 1vw;
+  padding-top: 20vh;
+}
+#page1 h1 {
+  text-align: center;
+  font-family: Futura;
+  font-size: 15vw;
+  text-transform: uppercase;
+  line-height: 14vw;
+}
+
+#page1 .video-container {
+  height: 100vh;
+  width: 100%;
+  background: aqua;
+  margin: auto;
+  position: relative;
+}
+#page1 .video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#page1 .video-container .play {
+  font-size: 1vw;
+  font-family: Futura;
+  text-transform: uppercase;
+  position: fixed;
+  background: #000;
+  color: #fff;
+  padding: 3vw 2.5vw;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+}
