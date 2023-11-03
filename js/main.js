@@ -1,3 +1,10 @@
+const smoothScroll = () => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+  });
+};
+
 const videoCursorAnimation = () => {
   const videoContainer = document.querySelector(".video-container");
   const playBtn = document.querySelector(".play");
@@ -18,8 +25,8 @@ const videoCursorAnimation = () => {
 
   videoContainer.addEventListener("mousemove", (e) => {
     gsap.to(playBtn, {
-      top: e.y - 50,
-      left: e.x - 20,
+      left: e.x-30,
+      top: e.y-20,
     });
   });
 };
@@ -28,7 +35,7 @@ const loadinMainHeading = () => {
     y: 100,
     opacity: 0,
     delay: 0.5,
-    duration: .3,
+    duration: 0.3,
     stagger: 0.3,
   });
   gsap.from("#page1 .video-container", {
@@ -37,8 +44,8 @@ const loadinMainHeading = () => {
     delay: 1.3,
     duration: 0.9,
   });
-  
 };
 
+smoothScroll();
 loadinMainHeading();
 videoCursorAnimation();
