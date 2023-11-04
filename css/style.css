@@ -109,14 +109,25 @@ body{
   height: 30px;
   width: 80%;
   position: absolute;
+  top: 50%;
   background: #E5F0D6;
-  border-radius: 50px;
-  transition: all 0.3s ease;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  padding: .5rem 1rem;
 }
-/* #page2 .elem .dets:hover{
-  height: 100px;
+#page2 .elem .dets:hover{
+  top: 50%;
+  height: calc(30px + 200px);
+  /* border-radius: 20px; */
+}
+#page2 .elem .dets .all-details{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
-} */
 #page2 .elem img{
   width: 100%;
   height: 100%;
