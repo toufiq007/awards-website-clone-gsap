@@ -25,8 +25,9 @@ const videoCursorAnimation = () => {
 
   videoContainer.addEventListener("mousemove", (e) => {
     gsap.to(playBtn, {
-      left: e.x-30,
-      top: e.y-20,
+      left: e.x,
+      top: e.y,
+      scale: 1,
     });
   });
 };
@@ -45,6 +46,25 @@ const loadinMainHeading = () => {
     duration: 0.9,
   });
 };
+document.addEventListener("mousemove", (e) => {
+  gsap.to(".cursor", {
+    left: e.x,
+    top: e.y,
+  });
+});
+
+document.querySelectorAll(".child").forEach((elem) => {
+  elem.addEventListener("mouseenter", () => {
+    gsap.to(".cursor", {
+      scale: 1,
+    });
+  });
+  elem.addEventListener("mouseleave", () => {
+    gsap.to(".cursor", {
+      scale: 0,
+    });
+  });
+});
 
 smoothScroll();
 loadinMainHeading();
