@@ -75,8 +75,23 @@ body {
 #page2 .elem{
   height: 100%;
   width: 31%;
-  /* background: crimson; */
+  position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page2 .elem .dets{
+  height: 60px;
+  width: 80%;
+  position: absolute;
+  background: #E5F0D6;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+#page2 .elem .dets:hover{
+  height: 200px;
+
 }
 #page2 .elem img{
   width: 100%;
