@@ -30,6 +30,29 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
+const navbarAnimation = ()=>{
+  gsap.to(".nav-part1 svg", {
+    transform: "translateY(-100%)",
+    scrollTrigger: {
+      trigger: "#page1",
+      scroller: "#main",
+      start: "top 0",
+      end: "top -5%",
+      scrub: true,
+    },
+  });
+  gsap.to(".nav-part2 .links", {
+    transform: "translateY(-100%)",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#page1",
+      scroller: "#main",
+      start: "top 0",
+      end: "top -5%",
+      scrub: true,
+    },
+  });
+}
 
 const videoCursorAnimation = () => {
   const videoContainer = document.querySelector(".video-container");
@@ -99,3 +122,4 @@ locomotiveScrollTrigger()
 loadinMainHeading();
 videoCursorAnimation();
 cursonAnimation()
+navbarAnimation()
